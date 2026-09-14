@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
+		https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	id="WebApp_ID" version="6.0">
+	<display-name>BibliotecaUntec</display-name>
+	
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	
+	<error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+    
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		
+		<servlet-class>
+			com.untec.usuario.controller.LoginServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		
+		<servlet-class>
+			com.untec.usuario.controller.LogoutServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AgregarLibroServlet</servlet-name>
+		
+		<servlet-class>
+			com.untec.libro.controller.AgregarLibroServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AgregarLibroServlet</servlet-name>
+		<url-pattern>/AgregarLibro</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EliminarLibroServlet</servlet-name>
+		
+		<servlet-class>
+			com.untec.libro.controller.EliminarLibroServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>EliminarLibroServlet</servlet-name>
+		<url-pattern>/EliminarLibro</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BuscarLibroServlet</servlet-name>
+		
+		<servlet-class>
+			com.untec.libro.controller.BuscarLibroServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>BuscarLibroServlet</servlet-name>
+		<url-pattern>/BuscarLibro</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ModificarLibroServlet</servlet-name>
+		
+		<servlet-class>
+			com.untec.libro.controller.ModificarLibroServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ModificarLibroServlet</servlet-name>
+		<url-pattern>/ModificarLibro</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

@@ -1,0 +1,1 @@
+Si desea ver un ejemplo y una explicación del funcionamiento del proyecto dirigirse a la carpeta src/main/webapp/assets/ScriptBD-Readme dentro encontrará un .pdf con toda la información.
